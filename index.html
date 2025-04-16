@@ -1,47 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Talent Match</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <div class="logo">Talent Match</div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf_NcUvUDvwijm2G9YoVw34ENA0bWJzc5KA9lLYllAvnmSqpg/viewform?usp=header" target="_blank">Job Seekers</a></li>
-        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScPsUEebxY5vbFCRYb2qQpjifNdmVEpb3q8REKeAL63hrYkjQ/viewform?usp=header" target="_blank">Employers</a></li>
-      </ul>
-    </nav>
-  </header>
+export default function TalentMatch() {
+  return (
+    <main className="min-h-screen bg-white text-gray-900">
+      {/* Navigation */}
+      <nav className="flex justify-between items-center p-6 shadow-md sticky top-0 bg-white z-50">
+        <h1 className="text-xl font-bold">TalentMatch</h1>
+        <div className="space-x-4">
+          <a href="#how" className="hover:underline">How it Works</a>
+          <a href="#seekers" className="hover:underline">For Job Seekers</a>
+          <a href="#employers" className="hover:underline">For Employers</a>
+        </div>
+      </nav>
 
-  <section class="hero">
-    <div class="content">
-      <h1>Connecting African Graduates to Opportunities</h1>
-      <p>Submit your resume or find top talent — Talent Match uses smart matching to make job hunting easier.</p>
-      <div class="cta-buttons">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_NcUvUDvwijm2G9YoVw34ENA0bWJzc5KA9lLYllAvnmSqpg/viewform?usp=header" class="btn primary" target="_blank">Submit Resume</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScPsUEebxY5vbFCRYb2qQpjifNdmVEpb3q8REKeAL63hrYkjQ/viewform?usp=header" class="btn secondary" target="_blank">For Employers</a>
-      </div>
-    </div>
-  </section>
+      {/* Hero */}
+      <section className="text-center py-20 px-4 bg-gray-50">
+        <h2 className="text-4xl font-bold mb-4">Job Hunting Is Broken. We're Fixing It.</h2>
+        <p className="text-lg max-w-2xl mx-auto mb-8">
+          TalentMatch is a smarter way to connect job seekers and employers — based on potential, skills, and real alignment.
+        </p>
+        <div className="flex justify-center gap-4">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_NcUvUDvwijm2G9YoVw34ENA0bWJzc5KA9lLYllAvnmSqpg/viewform" target="_blank" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold">Submit Resume</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScPsUEebxY5vbFCRYb2qQpjifNdmVEpb3q8REKeAL63hrYkjQ/viewform" target="_blank" className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-full font-semibold">For Employers</a>
+        </div>
+      </section>
 
-  <section id="about" class="about">
-    <h2>How It Works</h2>
-    <p>Talent Match analyzes resumes, identifies strengths, and connects job seekers with the most relevant roles. Employers submit job descriptions and get matched with top candidates.</p>
-  </section>
+      {/* Split Landing */}
+      <section id="how" className="grid md:grid-cols-2 items-center gap-12 py-20 px-6 bg-white">
+        <div>
+          <h3 className="text-3xl font-bold mb-4">How TalentMatch Works</h3>
+          <ul className="space-y-3 text-lg">
+            <li>• Upload your resume (Job Seekers)</li>
+            <li>• Submit job descriptions (Employers)</li>
+            <li>• Our system analyzes skills and potential</li>
+            <li>• We recommend the best match on both sides</li>
+            <li>• Get notified, interview, and get hired</li>
+          </ul>
+        </div>
+        <img src="https://illustrations.popsy.co/gray/search-jobs.svg" alt="Illustration" className="w-full max-w-md mx-auto" />
+      </section>
 
-  <section class="testimonial">
-    <h2>Why We Built Talent Match</h2>
-    <p>Too many graduates struggle to find meaningful work. We're building a bridge between talent and opportunity — starting with Africa's youth.</p>
-    <p>Our mission: Empower 100,000+ graduates with smart job matching by 2026.</p>
-  </section>
+      {/* Card Grid */}
+      <section className="py-20 px-6 bg-gray-50">
+        <h3 className="text-3xl font-bold text-center mb-12">Features</h3>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-xl shadow hover:shadow-md">
+            <h4 className="font-semibold text-xl mb-2">Resume Feedback</h4>
+            <p>Get a professional review to improve your chances of landing interviews.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow hover:shadow-md">
+            <h4 className="font-semibold text-xl mb-2">Job Matching</h4>
+            <p>We connect you to jobs that actually match your skills and growth goals.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow hover:shadow-md">
+            <h4 className="font-semibold text-xl mb-2">Pre-Screening</h4>
+            <p>Employers see ranked candidates ready for interview based on performance potential.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow hover:shadow-md">
+            <h4 className="font-semibold text-xl mb-2">Remote & Local Jobs</h4>
+            <p>Opportunities across borders — starting in Kenya and expanding globally.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow hover:shadow-md">
+            <h4 className="font-semibold text-xl mb-2">Fair Visibility</h4>
+            <p>We don’t just reward flashy resumes — we prioritize skill, passion, and readiness.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow hover:shadow-md">
+            <h4 className="font-semibold text-xl mb-2">Community Driven</h4>
+            <p>We’re building this with feedback from real job seekers and recruiters.</p>
+          </div>
+        </div>
+      </section>
 
-  <footer>
-    <p>&copy; 2025 Talent Match. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+      {/* Footer */}
+      <footer className="bg-white text-center py-8 border-t mt-12 text-sm">
+        <p>© {new Date().getFullYear()} TalentMatch. Built with 💼 to fix hiring.</p>
+        <p>For any questions, contact us at talentmatch.help@gmail.com</p>
+      </footer>
+    </main>
+  );
+}
+
